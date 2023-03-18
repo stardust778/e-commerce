@@ -1,0 +1,37 @@
+@use '../../../styles/utils/colors' as *;
+@use '../../../styles/utils/breakpoints' as *;
+
+.categories {
+    width: 100%;
+    background-color: $secondary;
+
+    > ul {
+        display: flex;
+        justify-content: center;
+        gap: 6.4rem;
+
+        list-style: none;
+
+        a:link, a:visited {
+            font-size: 1.4rem;
+            color: $black;
+            text-decoration: none;
+            display: block;
+            padding: 1rem;
+            transition: .3s all;
+
+            &:hover {
+                background-color: $secondary-hover;
+            }
+
+            &::selection {
+                background-color: $primary;
+                color: $white;
+            }
+        }
+    }
+
+    @include tablet {
+        display: none;
+    }
+}

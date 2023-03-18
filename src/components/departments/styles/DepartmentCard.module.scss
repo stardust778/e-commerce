@@ -1,0 +1,34 @@
+@use '../../../styles/utils/colors' as *;
+
+.department_card {
+    width: fit-content;
+    text-align: center;
+    text-decoration: none;
+    color: $text;
+    transition: .3s all;
+
+    > .image {
+        width: 18rem;
+        height: 18rem;
+        margin-bottom: .8rem;
+        user-select: none;
+        transition: .3s all;
+    }
+
+    > .name {
+        font-size: 1.6rem;
+        
+        &::selection {
+            background-color: $primary;
+            color: $white;
+        }
+    }
+
+    &:hover {
+        text-decoration: underline;
+
+        > .image {
+            transform: scale(.95);
+        }
+    }
+}

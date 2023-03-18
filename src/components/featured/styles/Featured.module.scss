@@ -1,0 +1,17 @@
+@use '../../../styles/utils/mixins' as *;
+@use '../../../styles/utils/colors' as *;
+
+.featured {
+    background-color: $lightgray;
+
+    > .wrapper {
+        @include container;
+  
+        display: flex;
+        justify-content: space-between;
+          
+        @media (max-width: 600px) {
+            padding: .8rem;
+        }
+    }
+}

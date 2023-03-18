@@ -1,0 +1,19 @@
+.service {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    > .availability {
+        font-size: 1.4rem;
+    }
+
+    @media (max-width: 840px) {
+        grid-column: 2 / 3;
+        grid-row: 2;
+    }
+    
+    @media (max-width: 480px) {
+        grid-column: 1;
+    }
+}

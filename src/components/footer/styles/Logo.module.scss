@@ -1,0 +1,33 @@
+@use '../../../styles/utils/colors' as *;
+
+.logo {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  gap: .8rem;
+  
+  cursor: pointer;
+  user-select: none;
+  z-index: 9999;
+
+  & > img {
+    width: 3.2rem;
+    filter: invert(1);
+  }
+
+  & > h1 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $black;
+  }
+
+  &::selection {
+    background-color: $primary;
+    color: $white;
+  }
+
+  @media (max-width: 840px) {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+}

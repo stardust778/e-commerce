@@ -1,0 +1,20 @@
+@use "../../../styles/utils/colors" as *;
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+
+  font-size: 1.4rem;
+  text-align: center;
+
+  > .container {
+    a:link,
+    a:visited {
+      padding-left: 0.5rem;
+      text-decoration: none;
+      color: $text;
+    }
+  }
+}

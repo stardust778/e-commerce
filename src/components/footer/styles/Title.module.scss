@@ -1,0 +1,10 @@
+@use '../../../styles/utils/colors' as *;
+
+.title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: $black;
+    
+    padding-top: .5rem;
+    margin-bottom: .5rem;
+}

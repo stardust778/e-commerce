@@ -1,0 +1,86 @@
+@use "../../../styles/utils/colors" as *;
+
+.question {
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+    color: $black;
+    border-bottom: .1rem solid $lightgray;
+    border-radius: .8rem;
+    
+    overflow: hidden;
+
+    > .radio {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    > .label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: .8rem 1.6rem;
+        background-color: $white;
+        font-size: 1.8rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $secondary;
+        }
+
+        &::after {
+            content: "\276F";
+            display: grid;
+            place-content: center;
+            width: fit-content;
+            height: fit-content;
+            text-align: center;
+            transition: all .2s;
+        }
+
+        &::selection {
+            background-color: $primary;
+            color: $white;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 1.6rem;
+        }
+    }
+
+    > .content {
+        max-height: 0;
+        padding: 0 .8rem;
+        color: $text;
+        background: $white;
+        font-size: 1.6rem;
+        transition: all .35s;
+
+        &::selection {
+            background-color: $primary;
+            color: $white;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 1.4rem;
+        }
+    }
+
+    .radio:checked {
+        + .label {
+            background: $secondary-hover;
+
+            &::after {
+                transform: rotate(90deg);
+            }
+        }
+        
+        ~ .content {
+            max-height: 100%;
+            padding: 1.6rem;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@use '../../../styles/utils/mixins.scss' as *;
+@use '../../../styles/utils/colors.scss' as *;
+
+.accordion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .8rem;
+    
+    overflow: hidden;
+    margin-bottom: 6.4rem;
+
+    @include container;
+}

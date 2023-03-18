@@ -1,0 +1,36 @@
+@use '../../../styles/utils/colors' as *;
+@use '../../../styles/utils/breakpoints' as *;
+
+.social {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  > .icons {
+    display: flex;
+    gap: .8rem;
+
+    list-style: none;
+
+    & > li {
+      & > a:link, & > a:visited {
+        display: grid;
+        place-content: center;
+
+        color: $icon;
+        padding: .6rem;
+        font-size: 1.8rem;
+        border-radius: .4rem;
+
+        &:hover {
+          background-color: $primary-hover;
+        }
+
+        &:active {
+          transform: translateY(.1rem);
+        }
+      }
+    }
+  }
+}
